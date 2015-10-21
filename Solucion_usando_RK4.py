@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+﻿# -*- coding: utf-8 -*-
 '''
 Script que utiliza Runge_kutta 4 para calcular y graficar aproximadamente
 5 orbitas. Además grafica energia vs tiempo.
@@ -6,7 +6,7 @@ Script que utiliza Runge_kutta 4 para calcular y graficar aproximadamente
 
 import numpy as np
 import matplotlib.pyplot as plt
-from Planeta import Planeta
+from planeta import Planeta
 
 condicion_inicial = [10, 0, 0, 0.3] #x, y, vx, vy
 

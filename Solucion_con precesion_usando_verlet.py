@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+﻿#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
 '''
@@ -8,7 +8,7 @@ Script que utiliza Verlet para calcular y graficar aproximadamente
 
 import numpy as np
 import matplotlib.pyplot as plt
-from Planeta import Planeta
+from planeta import Planeta
 
 condicion_inicial  =  [10, 0, 0, 0.3]
 p  =  Planeta(condicion_inicial, alpha = 10**(-2.257))
