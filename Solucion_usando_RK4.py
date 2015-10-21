@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 '''
-Script que utiliza Euler explicito para calcular y graficar aproximadamente
+Script que utiliza Runge_kutta 4 para calcular y graficar aproximadamente
 5 orbitas. Además grafica energia vs tiempo.
 '''
 
@@ -25,10 +25,10 @@ Energia.append(p.energia_total())
 dt=1
 t=1 #ya se realizo el primer calculo
 while t<=t_total:
-    p.avanza_euler(dt)
-    x_siguiente, y_siguiente, vx_siguiente, vy_siguiente = p.y_actual
-    x.append(x_siguiente)
-    y.append(y_siguiente)
+    p.avanza_rk4(dt)
+    xf, yf, vxf, vyf = p.y_actual
+    x.append(xf)
+    y.append(yf)
     Energia.append(p.energia_total())
     t+=dt
 
@@ -37,7 +37,7 @@ arreglo_de_tiempos=np.linspace(0,t_total,t_total/dt+1)
 #Plotea orbita (y vs x)
 plt.figure(1)
 plt.plot(x,y)
-plt.title('Orbita metodo Euler explicito ($\\alpha=0$)')
+plt.title('Orbita metodo Runge-kutta 4 ($\\alpha=0$)')
 plt.xlabel('x')
 plt.ylabel('y')
 plt.grid(True)
